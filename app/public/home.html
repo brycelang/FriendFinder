@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
+  <title>FriendFinder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <!-- optional -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://unpkg.com/fancy-textfill/dist/fancy-text-fill.jQuery.js"></script>
 </head>
-<body>
-  
+
+<body id="geopattern" class="geopattern">
+
+  <div class="container" id="geopattern">
+    <br>
+    <br>
+    <div class="jumbotron" id="jumbo">
+      <div class="container">
+      <h1 class="text-center" id="h1">
+        <i class="fa fa-vcard" aria-hidden="true"></i> Friend Finder</h1>
+      <hr>
+      <br>
+      <h2 class="text-center" id="h2">Just fill out this simple survey</h2>
+      <h2 class="text-center" id="h2">We will find just the friend for you based on compatibility!</h2>
+      <br>
+      <div class="text-center">
+        <a href="/survey">  <button class="btn btn-lg btn-danger">  <h4> <span class="fa fa-list-alt"></span> Go to Survey</h4>  </button>
+        </a>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+      <hr>
+      <footer class="footer">
+        <div class="container">
+          <p >
+            <a style="color:  #362819;" href="/api/friends">API Friends List</a> |
+            <a style="color:  #362819;" href="https://github.com/afhaque/friendfinder">GitHub Repo</a>
+          </p>
+        </div>
+      </footer>
+    </div>  
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var pattern = GeoPattern.generate('okayddsawer');
+        $('#geopattern').css('background-image', pattern.toDataUrl());
+      });
+    </script>
+
 </body>
+
 </html>
