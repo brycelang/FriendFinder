@@ -7,7 +7,7 @@ var path = require("path");
 
 //basic express server being started on port 8080
 var init = express();
-var port =  process.env.PORT || 880;
+var port =  process.env.PORT || 8080;
 
 init.use(bodyParse.urlencoded({ extended: true }));
 // parse application/json
