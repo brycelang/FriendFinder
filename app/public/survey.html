@@ -5,8 +5,266 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://surveyjs.azureedge.net/1.0.40/survey.jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.js" type="text/javascript"></script>
+
+
+
 </head>
-<body>
-  okay
+<body class="geopattern" id="geopattern">
+    <div class="container" id="geopattern">
+        <br>
+        <br>
+        <!-- HEADER -->
+        <div class="jumbotron" style=" background-color: #FFCCCC;">
+          <div class="container">   
+              <h2 class="text-center" style="  color: #362819; font-size: 50px;"><i class="fa fa-vcard" aria-hidden="true"></i> Just fill out this simple survey</h2>
+              <h2 class="text-center" style="  color: #362819; font-size: 35px;">We will find just the friend for you based on compatibility!</h2>
+              <br>
+    <hr>
+          <div class="row">
+            
+            <div class="col-6">
+                        <!-- SURVEY -->
+              <h3 style="  color: #362819;" ><strong>Question 1</strong></h3>
+              <h4 style="  color: #362819;" >Your mind is always buzzing with unexplored ideas and plans.</h4>
+              <select class="chosen-select" id="q1">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+          <hr>
+          <h3 style="  color: #362819;" ><strong>Question 2</strong></h3>
+              <h4 style="  color: #362819;" >Generally speaking, you rely more on your experience than your imagination.</h4>
+              <select class="chosen-select" id="q2">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <hr>
+          
+              <h3 style="  color: #362819;" ><strong>Question 3</strong></h3>
+              <h4 style="  color: #362819;" >You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+              <select class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <hr>
+          
+              <h3 style="  color: #362819;" ><strong>Question 4</strong></h3>
+              <h4 style="  color: #362819;" >You rarely do something just out of sheer curiosity.</h4>
+              <select class="chosen-select" id="q4">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <hr>
+          
+              <h3 style="  color: #362819; " ><strong>Question 5</strong></h3>
+              <h4 style="  color: #362819;" >People can rarely upset you.</h4>
+              <select class="chosen-select" id="q5">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <hr>
+            </div>
+            <div class="col-6">
+          
+              <h3 style="  color: #362819;" ><strong>Question 6</strong></h3>
+              <h4 style="  color: #362819;" >It is often difficult for you to relate to other people’s feelings.</h4>
+              <select class="chosen-select" id="q6">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <hr>
+              <h3 style="  color: #362819;" ><strong>Question 7</strong></h3>
+              <h4 style="  color: #362819;" >In a discussion, truth should be more important than people’s sensitivities.</h4>
+              <select class="chosen-select" id="q7">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <hr>
+              <h3 style="  color: #362819;" ><strong>Question 8</strong></h3>
+              <h4 style="  color: #362819;" >You rarely get carried away by fantasies and ideas.</h4>
+              <select class="chosen-select" id="q8">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <hr>
+              <h3 style="  color: #362819;" ><strong>Question 9</strong></h3>
+              <h4 style="  color: #362819;" >You think that everyone’s views should beeeeee</h4>
+              <select class="chosen-select" id="q9">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <hr>
+              <h3 style="  color: #362819;" ><strong>Question 10</strong></h3>
+              <h4 style="  color: #362819;" >You feel more energetic after spending time.</h4>
+              <select class="chosen-select" id="q10">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <hr>
+            </div>
+            
+          </div>
+              <br>
+              <br>
+              <!-- MODAL -->
+              <div id="modal" data-iziModal-title="Your Match :)"  data-iziModal-icon="icon-friend" >
+                  <div class="modal-content"> 
+                        <h2 class="modal-title" style="font-size: 30px; text-align: center;"><strong>Best Match</strong></h2>
+                      </div>
+                      <div class="modal-body">
+                        <h2 id="match-name"></h2>
+                        <img id="match-img" src="" alt="">
+                      </div>
+                      </div>
+                      </div>
+                      <div id="errorDiv" style="margin-bottom: 15px; font-size: 30px; text-align: center;"></div>
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-danger btn-lg btn-block" id="submit" style=" color: #FFCCCC;"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit</button>
+            <br>
+            <!-- FOOTER -->
+            <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+              <hr>
+              <footer class="footer">
+                <div class="container">
+                  <p >
+                    <a style="color:  #362819;" href="/api/friends">Home</a> |
+                    <a style="color:  #362819;" href="https://github.com/afhaque/friendfinder">GitHub Repo</a>
+                  </p>
+                </div>
+              </footer>
+            </div>  
+            </div>
+          </div>
+        </div>
+    
+
+
+        </div>
+ 
+  <!-- Modal -->
+
+  
+  <script>
+  $(document).ready(function () {
+    $("#modal").iziModal();
+      var pattern = GeoPattern.generate('okayddsawer');
+      $('#geopattern').css('background-image', pattern.toDataUrl());
+
+
+    // Capture the form inputs
+    $("#submit").on("click", function(event) {
+      console.log("ld");
+    // $('#modal').iziModal('setZindex', 99999);
+    // $('#modal').iziModal('open', { zindex: 99999 });
+    $('#modal').iziModal('open');
+      event.preventDefault();
+
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function() {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+
+        $(".chosen-select").each(function() {
+
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+
+      // If all required fields are filled
+      if (validateForm()) {
+        // Create an object for the user"s data
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+
+        // AJAX post the data to the friends API.
+        $.post("/api/friends", userData, function(data) {
+
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+
+
+        });
+      } else {
+        $("#errorDiv").text("Please fill out all fields before submitting!");
+      }
+    });
+      });
+      
+    </script>
 </body>
 </html>

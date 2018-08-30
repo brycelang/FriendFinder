@@ -14,6 +14,7 @@ init.use(bodyParse.urlencoded({ extended: true }));
 init.use(bodyParse.json());
 
 require("./app/routing/htmlRoutes")(init);
+require("./app/routing/apiRoutes")(init);
 
 //instruct express to bind and listen to port 8080
 init.listen(port, function() {

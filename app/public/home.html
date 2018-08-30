@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://unpkg.com/fancy-textfill/dist/fancy-text-fill.jQuery.js"></script>
 </head>
-
 <body id="geopattern" class="geopattern">
 
   <div class="container" id="geopattern">
@@ -28,15 +27,43 @@
         <i class="fa fa-vcard" aria-hidden="true"></i> Friend Finder</h1>
       <hr>
       <br>
-      <h2 class="text-center" style="  color: #8B7D7B; font-size: 50px;">Just fill out this simple survey</h2>
-      <h2 class="text-center" style="  color: #8B7D7B; font-size: 35px;">We will find just the friend for you based on compatibility!</h2>
+      <!-- <h2 class="text-center" style="  color: #8B7D7B; font-size: 50px;">Just fill out this simple survey</h2> -->
+      <!-- <h2 class="text-center" style="  color: #8B7D7B; font-size: 35px;">We will find just the friend for you based on compatibility!</h2> -->
       <br>
-      <div class="text-center">
-        <a href="/survey">  <button class="btn btn-lg btn-danger">  <h4> <span class="fa fa-list-alt"></span> Go to Survey</h4>  </button>
+      <div>
+          <div id="container" class="container" style="height: 300px; margin-left: -15px;">
+            </div>
+        
+            <script src="http://matthew.wagerfield.com/flat-surface-shader/deploy/fss.min.js"></script>
+            <script>
+            var container = document.getElementById('container');
+            var renderer = new FSS.CanvasRenderer();
+            var scene = new FSS.Scene();
+            var light = new FSS.Light('#111122', '#FF0022');
+            var geometry = new FSS.Plane(1000, 500, 10, 5);
+            var material = new FSS.Material('#FFFFFF', '#FFFFFF');
+            var mesh = new FSS.Mesh(geometry, material);
+            var now, start = Date.now();
+            function initialise() {
+              scene.add(mesh);
+              scene.add(light);
+              container.appendChild(renderer.element);
+              window.addEventListener('resize', resize);
+            }
+            function resize() {
+              renderer.setSize(container.offsetWidth, container.offsetHeight);
+            }
+            function animate() {
+              now = Date.now() - start;
+              light.setPosition(300*Math.sin(now*0.001), 200*Math.cos(now*0.0005), 60);
+              renderer.render(scene);
+              requestAnimationFrame(animate);
+            }
+            initialise();
+            resize();
+            animate();
+            </script>
         </a>
-        <br>
-        <br>
-        <br>
       </div>
     </div>
 
@@ -51,6 +78,7 @@
         </div>
       </div>
       <div class="container">
+          <a href="/survey" style="text-decoration: none;">  <button class="btn btn-lg btn-danger btn-block">  <h4 style="color:#FFCCCC;"> <span class="fa fa-list-alt"></span> Go to Survey</h4>  </button>
       <hr>
       <footer class="footer">
         <div class="container">
